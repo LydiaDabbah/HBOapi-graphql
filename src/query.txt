@@ -1,0 +1,30 @@
+mutation createMovie($title:String!,$description:String!,$dateOfRelease:String!,$image:String!,$likes:Int){
+  createMovie(input:{title:$title,description:$description,dateOfRelease:$dateOfRelease,image:$image, likes:$likes}){
+    _id
+    title
+  }
+}
+
+{
+  "title":"",
+  "description": "",
+  "dateOfRelease": "",
+  "image": "",
+  "likes":0
+}
+
+mutation updateMovie($title:String!,$description:String!,$dateOfRelease:String!,$image:String!,$likes:Int,$id:ID){
+  updateMovie(input:{title:$title,description:$description,dateOfRelease:$dateOfRelease,image:$image, likes:$likes},_id:$id){
+    _id
+    title
+  }
+}
+
+{
+  "id":"",
+  "title":"",
+  "description": "",
+  "dateOfRelease": "",
+  "image": "",
+  "likes":0
+}
