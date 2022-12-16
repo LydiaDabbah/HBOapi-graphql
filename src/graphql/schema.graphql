@@ -9,7 +9,7 @@ type Mutation {
      updateMovie(input:MovieInput, _id:ID) :Movie
     removeMovie(id:ID):[Movie]
      createUser(input:UserInput):User
-     addLikes(input:LikesInput,_id:ID):Movie
+     addLikes(_id:ID):Movie
      login(email: String, password: String): String
       }  
 

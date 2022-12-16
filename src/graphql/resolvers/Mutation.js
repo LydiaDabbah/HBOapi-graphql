@@ -31,7 +31,7 @@ const Mutation ={
 
               const token = createJwtToken(verifyUser)
               return token
-        },async addLikes(_,{ input,_id}){
+        },async addLikes(_,{_id}){
             
            return await Movie.findByIdAndUpdate(
                 _id,
